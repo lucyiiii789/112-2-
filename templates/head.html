@@ -1,0 +1,30 @@
+<!-- 會員模式/首頁 -->
+{% extends "headbase.html" %}
+  {% block style%}
+   <link rel="stylesheet" href = "{{url_for('static', filename = 'index.css')}}"">
+  {% endblock style%}
+
+   {% block content %}
+  <div class = "form-horizontal sqare"><h5>
+    <div id="count">0</div>
+    <center><div>
+      <img id="cat" src="{{ url_for('static',filename='images/34.jpg') }}" style = "height:450px; width:800px;""></div></center>
+    </h5>
+  </div>
+
+  <script>
+    let count = 0;
+    const cat = document.getElementById('cat');
+    const countDisplay = document.getElementById('count');
+
+    cat.addEventListener('mousedown', ()=>{
+        cat.src = "{{ url_for('static',filename='images/36.jpg') }}";
+        count++;
+        countDisplay.textContent = count;
+        });
+
+    cat.addEventListener('mouseup',()=> {
+        cat.src = "{{ url_for('static',filename='images/34.jpg') }}";
+       });
+  </script>
+  {% endblock content %} 

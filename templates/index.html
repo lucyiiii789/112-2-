@@ -1,0 +1,32 @@
+<!-- 訪客模式/首頁 -->
+  {% extends "indexbase.html" %}
+  {% block style%}
+   <link rel="stylesheet" href = "{{url_for('static', filename = 'index.css')}}"">
+  {% endblock style%}
+
+  {% block content %}
+  <!-- pop horse小遊戲版面 -->
+  <div class = "form-horizontal sqare"><h5>
+    <div id="count">0</div>
+    <center><div>
+      <img id="cat" src="{{ url_for('static',filename='images/34.jpg') }}" style = "height:450px; width:800px;""></div></center>
+    </h5>
+  </div>
+
+  <script>
+    let count = 0; //初始化計算數字
+    const cat = document.getElementById('cat'); //獲取CSS
+    const countDisplay = document.getElementById('count');  //獲取CSS
+
+    cat.addEventListener('mousedown', ()=>{
+        cat.src = "{{ url_for('static',filename='images/36.jpg') }}";
+        count++; //數字+1
+        countDisplay.textContent = count; //顯示數字
+        });
+
+    cat.addEventListener('mouseup',()=> {
+        cat.src = "{{ url_for('static',filename='images/34.jpg') }}";
+       });
+  </script>
+  {% endblock content %} 
+

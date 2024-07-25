@@ -1,0 +1,31 @@
+<!-- 管理者模式/所有訂單 -->
+{% extends "adminbase.html" %}
+{% block content%}
+  <div class="form-horizontal sqare" >
+    <h1>所有訂單</h1><br>
+  <table class="table table-striped table-hover">
+      <tr>
+        <td>訂單編號</td>
+        <td>下單用戶</td>
+        <td>下單時間</td>
+        <td>商品總數</td>
+        <td>訂單總額</td>
+        <td></td>
+      </tr>
+    {%for order in allorders%}
+      <tr>
+      <td> AL4846{{order.orderid}} </td>
+      <td>{{order.orderuser}}</td>
+      <td>{{order.date_created.strftime('%Y-%m-%d')}} </td>
+      <td>{{order.totalquantity}} </td>
+      <td>${{ order.totalprice }}</td>
+      <td> <a href="{{ url_for('adminorder_details', orderid = order.orderid) }}"><button  type="button" class="btn btn-success">訂單詳情</button></a>
+</td>
+
+      </tr>
+    {% endfor %}
+
+  </table>
+    </div>
+{% endblock content%}
+

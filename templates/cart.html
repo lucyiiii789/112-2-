@@ -1,0 +1,32 @@
+<!-- 會員模式/購物車 -->
+{% extends "headbase.html" %}
+  {% block style%}
+   <link rel="stylesheet" href = "{{url_for('static', filename = 'main.css')}}"">
+  {% endblock style%}
+
+   {% block content %}  
+<div class = "form-horizontal sqare" >
+  <h1>購物車</h1><br>
+  <table class="table table-striped table-hover">
+    <tr>
+      <td>商品名稱</td>
+      <td>商品價格</td>
+      <td>商品數量</td>
+      <td></td>
+    </tr>
+    {% for i in cart_items %}
+    <tr>
+      <td>{{ i.cartname }}</td>
+      <td>{{ i.cartprice }}</td>
+      <td>{{ i.cartquantity }}</td>
+      <td><a class="btn btn-danger" href="{{ url_for('delete_to_cart', cartname= i.cartname ) }}" onclick="return confirm('確定刪除此商品?')">刪除</a></td>
+    </tr>
+     {% endfor %}
+  </table>
+  <br>
+  <form action="{{ url_for('checkout') }}" method="post">
+      <input type="submit" class="btn btn-success" value="去買單">
+  </form>
+ 
+</div>
+{% endblock content %} 

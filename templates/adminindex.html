@@ -1,0 +1,56 @@
+<!-- 管理者模式/管理者首頁 -->
+  {% extends "adminbase.html" %}
+  {% block content%}
+  <div class="form-horizontal sqare" >
+    <h1>管理者頁面</h1><br>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      <div class="col">
+        
+        <div class="card">
+          <a href="{{ url_for('allusers')}}" class="stretched-link"></a>
+          <div class="card-header">
+            <h2 class="card-title" style = "color: rgb(0,0,0);">用戶人數</h2>
+          </div>
+          <div class="card-body">
+            
+            <h3 class="card-text">{{usernumber}}</h3>
+            
+          </div>
+        </div>
+      </div>
+        <div class="col">
+
+          <div class="card">
+            <a href="{{ url_for('allorders')}}" class="stretched-link"></a>
+            <div class="card-header">
+              <h2 class="card-title" style = "color: rgb(0,0,0);">訂單數量</h2>
+            </div>
+            <div class="card-body">
+
+              <h3 class="card-text">{{ordernumber}}</h3>
+
+            </div>
+          </div>
+          </div>
+          <div class="col">
+
+            <div class="card">
+              
+              <div class="card-header">
+                <h2 class="card-title" style = "color: rgb(0,0,0);">商品數量</h2>
+              </div>
+              <div class="card-body">
+
+                <h3 class="card-text">{{itemnumber-2}}</h3>
+
+              </div>
+            </div>
+      
+      </div>
+    
+    </div>
+ 
+      </div>
+  {% endblock content%}
+   

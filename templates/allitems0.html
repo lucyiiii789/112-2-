@@ -1,0 +1,172 @@
+<!-- 訪客模式/All items -->
+{% extends "indexbase.html" %}
+  {% block style%}
+  <link rel="stylesheet" href = "{{url_for('static', filename = 'allitems.css')}}"">
+  {% endblock style%}
+
+
+   {% block content %}
+   <div class= "row" style = "margin-top: 10px;">
+     <div class = "col-md-1"></div>
+     <div class = "col-md-2">
+  <!-- 側欄 -->
+  <nav id="navbar-example3" class="navbar flex-column align-items-stretch p-3" style = "background-color:#f5f5f5">
+    <br><br>
+    <h2>All items </h2><br>
+    <nav class="nav nav-pills flex-column">
+      <p>明信片</p>
+      <p>鑰匙圈</p>
+      <p>紅包袋</p>
+      <p>貼紙</p>
+    </nav>
+  </nav>
+     </div>
+
+
+<!-- 商品列表 -->
+  <div class = "col-md-8">
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+  <div><br>
+  <h2 id="item-1">明信片<span class="badge rounded-pill bg-success" style = "font-size:20px">new</span></h2>
+  <div class="row row-cols-4 row-cols-md-4 g-4">
+
+
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/17.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/28.jpg') }}'"  onmouseleave = "this.src = '{{ url_for('static',filename='images/17.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">聖誕節明信片</h5>
+        <p class="card-text">$50</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/18.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/15.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/18.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">法國馬明信片</h5>
+        <p class="card-text">$40</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/19.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/13.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/19.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">泰雅族馬明信片</h5>
+        <p class="card-text">$40</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/21.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/14.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/21.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">火焰馬明信片</h5>
+        <p class="card-text">$40</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/22.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/16.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/22.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">台灣馬明信片</h5>
+        <p class="card-text">$40</p>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src=  "{{ url_for('static',filename='images/23.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/24.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/23.jpg') }}'" >
+      <div class="card-body">
+        <h5 class="card-title">2024跨年明信片</h5>
+        <p class="card-text">$50</p>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+  </div>
+
+
+  <br><br>
+  <h2 id="item-2">鑰匙圈</h2>
+  <div class="row row-cols-4 row-cols-md-4 g-4">
+
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src=  "{{ url_for('static',filename='images/31.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/4.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/31.jpg') }}'" >
+        <div class="card-body">
+          <h5 class="card-title">布農族馬鑰匙圈</h5>
+          <p class="card-text">$90</p>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </div>
+
+  <br><br>
+    <h2 id="item-2">紅包袋</h2>
+    <div class="row row-cols-4 row-cols-md-4 g-4">
+
+      <div class="col">
+        <div class="card h-100">
+          <img src=  "{{ url_for('static',filename='images/25.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/25.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/25.jpg') }}'" >
+          <div class="card-body">
+            <h5 class="card-title">龍年紅包袋</h5>
+            <p class="card-text">$20</p>
+          </div>
+          
+        </div>
+      </div>
+
+
+  </div>
+
+  <br><br>
+    <h2 id="item-2">貼紙</h2>
+    <div class="row row-cols-4 row-cols-md-4 g-4">
+
+
+      <div class="col">
+        <div class="card h-100">
+          <img src=  "{{ url_for('static',filename='images/9.jpg') }}" onmouseenter = "this.src='{{ url_for('static',filename='images/9.jpg') }}'" onmouseleave = "this.src = '{{ url_for('static',filename='images/9.jpg') }}'" >
+          <div class="card-body">
+            <h5 class="card-title">皮卡馬貼紙</h5>
+            <p class="card-text">$30</p>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+
+
+
+  </div>
+  </div>
+    <br><br><br><br>
+  </div>
+  </div>
+   {% endblock content %}
+

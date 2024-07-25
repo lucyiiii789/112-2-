@@ -1,0 +1,40 @@
+<!-- 會員模式/我的訂單/訂單詳情 -->
+{% extends "headbase.html" %}
+  {% block style%}
+   <link rel="stylesheet" href = "{{url_for('static', filename = 'main.css')}}"">
+  {% endblock style%}
+
+   {% block content %}
+  <div class="form-horizontal sqare" >
+    <h1>我的訂單</h1>
+  <table class="table table-striped table-hover">
+      <tr>
+        <td>訂單編號</td>
+        <td>商品名稱</td>
+        <td>商品價格</td>
+        <td>商品總數</td>
+        <td>小計</td>
+      </tr>
+    {% for order in order_items %}
+      <tr>
+      <td> AL4846{{order.orderitemid}}</td>
+      <td> {{order.orderitemname}} </td>
+      <td>${{order.orderitemprice}} </td>
+      <td>{{order.orderitemquantity}} </td>
+      <td>${{ order.orderitemsudtotal }}</td>
+      </tr>
+    {% endfor %}
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>訂單總額</td>
+        <td>${{order.totalprice}}</td>
+      </tr>
+  </table>
+     <a href="{{ url_for('orders')}}"><button  type="button" class="btn btn-outline-dark">回上頁</button></a>
+
+    </div>
+
+
+{% endblock content %} 

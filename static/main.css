@@ -1,0 +1,47 @@
+/* 訪客、會員模式其餘頁面美編 */
+body {
+margin: auto;
+font-size: 20px;
+font-family: Helvetica, Arial, sans-serif;
+background-color: #f5f5f5;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer{
+background-size: cover;
+width: 100%;
+margin-bottom: 0;
+font-size: 12px;
+font-family: Helvetica, Arial, sans-serif;
+background-color: black;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+.play {
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 700px;
+  align-content: center;
+  background-color: rgb(255, 255, 255,0.8);
+  color: #342b2b;
+  padding: 50px;
+  border-radius: 0px;
+}
+
+.sqare {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left:50px;
+  margin-right:50px;
+  height:100%;
+  align-content: center;
+  background-color: rgb(255, 255, 255,0.8);
+  color: #342b2b;
+  padding: 50px;
+  border-radius: 15px;
+}
